@@ -1,0 +1,16 @@
+<h1>Gaisans#index</h1>
+<%= form_tag('/gaisans/confirm') do %>
+  <%= label_tag(:kosuu,"個数") %>
+  <%= text_field_tag(:kosuu) %>
+  <br>
+  <%= label_tag(:genryouhi,"原料費") %>
+  <%= text_field_tag(:genryouhi) %>
+  <br>
+  <%= label_tag("容器") %>
+  <%= select_tag 'youki', options_for_select(["ボトル", "チューブ", "ジャー"]) %>
+  <br>
+  <%= label_tag("箱orシュリンク") %>
+  <%= select_tag 'gaikan', options_for_select(["化粧函", "シュリンク", "なし"]) %>
+  <br>
+  <%= submit_tag "概算計算" %>
+<% end %>
